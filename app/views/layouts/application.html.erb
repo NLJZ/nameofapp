@@ -15,7 +15,7 @@
 
   <body>
     <nav class="navbar navbar-expand-sm navbar-dark justify-content-left fixed-top">
-    <a class="navbar-brand" href="#">Bikes! Bikes! Bikes!<img src="/assetsracingbikeblue.svg" class="bikelogo"></a>
+    <a class="navbar-brand" href="#">Bikes! Bikes! Bikes!<%= image_tag("racingbikeblue.svg", class: "bikelogo") %></a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
@@ -33,7 +33,7 @@
     </div>
 
     <footer class="footer">
-      <img src="/assetsracingbikeyellow.svg" class="bikelogo img-responsive"><p>&copy; 2018 Bikes! Bikes! Bikes!</p>
+      <%= image_tag("racingbikeyellow.svg", class: "bikelogo img-responsive") %><p>&copy; 2018 Bikes! Bikes! Bikes!</p>
       
       
 
