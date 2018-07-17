@@ -8,30 +8,30 @@
   </ol>
   <div class="carousel-inner">
     <% @products.each do |product| %>
-    <div class="carousel-item active">
+    <div class="carousel-item<%= " active" if product == @products.first %>">
       <div class="carousel-item">
-        <%= image_tag(product.image_url) %>
+        <%= image_tag(product.image_url, class: "img-fluid") %>
         <div class="carousel-caption d-none d-md-block">
-          <h5><%= product.name %></h5>
-          <p>...</p>
+          <p><%= product.name %></p>
+          
         </div>
       </div>
     </div>
     <div class="carousel-item">
       <div class="carousel-item">
-        <%= image_tag(product.image_url) %>
+        <%= image_tag(product.image_url, class: "img-fluid") %>
         <div class="carousel-caption d-none d-md-block">
-          <h5><%= product.name %></h5>
-          <p>...</p>
+          <p><%= product.name %></p>
+          
         </div>
       </div>
     </div>
     <div class="carousel-item">
       <div class="carousel-item">
-        <%= image_tag(product.image_url) %>
+        <%= image_tag(product.image_url, class: "img-fluid") %>
         <div class="carousel-caption d-none d-md-block">
-          <h5><%= product.name %></h5>
-          <p>...</p>
+          <p><%= product.name %></p>
+          
         </div>
       </div>
     </div>

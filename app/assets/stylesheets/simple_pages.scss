@@ -150,23 +150,10 @@ a.navbar-brand img {
   background-color: #AAAAAA;
 }
 
-
-
-.carousel {
-  margin-left: -15px;
-  margin-right: -15px;
+.img-fluid {
+  min-width: 50px;
+  min-height: 50px;
 }
 
-.carousel-control {
-  width: 4%
-}
 
-.carousel-indicators {
-  display: none;
-}
-
-.carousel-item img {
-  max-width: 100%;
-  width: 100%;
-}
 
