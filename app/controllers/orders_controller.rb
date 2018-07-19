@@ -1,10 +1,12 @@
+
 class OrdersController < ApplicationController
+
   def index
     @orders = Order.includes(:product).all
   end
-  
+
   def show
-    @orders = Order.find(params[:id])
+    @order = Order.find(params[:id])
   end
 
   def new
@@ -15,4 +17,5 @@ class OrdersController < ApplicationController
 
   def destroy
   end
+
 end
