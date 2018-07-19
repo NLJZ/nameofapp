@@ -4,29 +4,8 @@
 
 <div class="container">
   <div class="row">
-    <% @products.each do |product| %>
-    <div class="col-md-4">
-      <h1><%= product.name %></h1>
-        <%= image_tag(product.image_url, class: "img-fluid") %>
-      <p>
-        Description: <%= product.description %> 
-      </p>
-      <p>
-        Color: <%= product.colour %>
-      </p>
-      <p>
-        Price: <%= product.price %>
-      </p>
-      <p>
-        <%= link_to 'Show', product %></td>
-        <%= link_to 'Edit', edit_product_path(product) %>
-        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </p>
-      </div>
-    <% end %>
-
-         
-    </div>
+    <%= render @products %>
+</div>
   
 
 <br>
