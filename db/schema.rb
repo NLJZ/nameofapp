@@ -15,8 +15,7 @@ ActiveRecord::Schema.define(version: 2018_07_19_172344) do
   create_table "orders", force: :cascade do |t|
     t.integer "user_id"
     t.integer "product_id"
-    t.decimal "total"
-    t.string "float"
+    t.float "total"
     t.index ["product_id"], name: "index_orders_on_product_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
@@ -28,7 +27,7 @@ ActiveRecord::Schema.define(version: 2018_07_19_172344) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "colour"
-    t.decimal "price"
+    t.integer "price"
   end
 
 end
