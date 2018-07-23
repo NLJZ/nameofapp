@@ -27,7 +27,7 @@ h2 {
   text-align: center;
   background-color: #5c5c5c;
   border: 4px solid #a9a9a9;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   letter-spacing: .1em;
   padding: 10px;
   border-radius: 15px;
@@ -126,10 +126,28 @@ a.navbar-brand img {
 }
 
 .contact-holder {
-  margin: 50px auto;
+  margin: 30px auto 20px auto;
   max-width: 800px;
   border-radius: 10px;
-  border: 2px solid #111;
+  border: 2px solid #999;
+}
+
+.flex img {
+  display: inline-block;
+  width: 40px;
+  float: left;
+  margin-right: 10px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  
+}
+
+.flex h4 {
+  margin: 0;
 }
 
 .info-box, .image-box {
@@ -144,11 +162,26 @@ a.navbar-brand img {
   padding: 20px;
 }
 
-.image-box, {
+.image-box {
   border-radius: 20px;
   border: 4px solid #555;
   background-color: #AAAAAA;
 }
+
+.carousel {
+  margin: 30px;
+}
+
+.carousel-caption {
+  color: #111;
+}
+
+.carousel-item {
+  width: 80%;
+  margin: 0 auto;
+}
+
+
 
 
 
