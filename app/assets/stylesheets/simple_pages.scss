@@ -19,7 +19,7 @@ h1 {
   background-color: #e6ecf0;;
   margin: 0;
   letter-spacing: 3px;
-  padding: 10px;
+  padding: 5px;
 }
 
 h2 {
@@ -33,6 +33,7 @@ h2 {
   border-radius: 15px;
   width: 85%;
   max-width: 800px;
+  margin-top: 20px;
 }
 
 p {
@@ -40,7 +41,7 @@ p {
 }
 
 form {
-  margin: 10px;
+  max-width: 900px;
 }
 
 .contact-holder button {
@@ -70,6 +71,7 @@ a:hover {
 
 .navbar {
   background-color: black;
+  
 }
 
 a.navbar-brand img {
@@ -181,6 +183,12 @@ a.navbar-brand img {
   margin: 0 auto;
 }
 
+.form-control-sm {
+
+  
+
+  
+}
 
 
 
