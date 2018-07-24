@@ -3,30 +3,31 @@
 
 
 <div class="fluid-container info-box">
-  <h3>Send all of your bike related questions, concerns, thoughts and dreams to us.</h3>
+<h3>Send all of your bike related questions, concerns, thoughts and dreams to us.</h3>
 
-  <div class="col-lg-7 col-md-7 contact-holder">
-    <form>
-      <div class="form-group">
-        <label for="yourname">name:</label>
-        <input type="text" class="form-control name-box" name="yourname" id="yourname" placeholder="enter your name">
-        <p id="visible-name"></p>
-      </div>
-      <div class="form-group">
-        <label for="youremail">e-mail:</label>
-        <input type="email" name="youremail" class="form-control email-box" required="required" placeholder="enter your email address*">
-        <p id="visible-email"></p>
-      </div>
-      <label for="yourmessage">message:</label>
-      <textarea class="form-control message-box" name="yourmessage" style="resize:none" required="required" cols="40" rows="5" placeholder="enter your message*"></textarea>
-      <button type="submit" class="btn btn-default" id="button">Submit</button>
-      
 
-    </form>
-  </div>
+<div class="info-box">
+  <%= flash[:notice] %>
+  <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
+    <div class="form-group">
+      <%= form.label :name %>
+      <%= form.text_field :name, class: "form-control", placeholder: "Your Name", required: true %>
+    </div>
+    <div class="form-group">
+      <%= form.label :email %>
+      <%= form.email_field :email, class: "form-control", placeholder: "Your Email", required: true %>
+    </div>
+    <div class="form-contol">
+      <%= form.label :message %>
+      <%= form.text_area :message, class: "form-control", placeholder: "Your Message", rows: 8, required: true %>
+    </div>
+  <%= form.submit "Send", class: "btn btn-outline-secondary" %>
+  <% end %>
+
+</div>
 
   <div class="flex">
-    <%= image_tag("mail.svg", :alt => "email") %><h4></span>bikes@bikesberlin.de</h4>
+  <%= image_tag("mail.svg", :alt => "email") %><h4></span>bikes@bikesberlin.de</h4>
   </div>
 
 </div>
