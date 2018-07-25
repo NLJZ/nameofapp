@@ -30,5 +30,5 @@ module Nameofapp
     # Don't generate system test files.
     config.generators.system_tests = nil
   end
-  config.assets.initialize_on_precompile = false
+  
 end
