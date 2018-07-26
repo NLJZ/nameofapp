@@ -12,6 +12,6 @@ class Product < ApplicationRecord
     comments.rating_desc.first
   end
   def lowest_rating_comment
-    commnets.rating_asc.first
+    comments.rating_asc.first
   end
 end
