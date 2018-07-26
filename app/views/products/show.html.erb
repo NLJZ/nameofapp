@@ -1,4 +1,7 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+
 <h1>Bikes! Bikes! Bikes!</h1>
 <h2>Products.</h2>
 <p>
@@ -22,10 +25,8 @@
 
    <p>
     <strong>Price:</strong>
-    <%= @product.price %>
+    <%= @product.price %> Dollars
   </p>
-
-
 
   <%= link_to 'Edit', edit_product_path(@product) %> |
   <%= link_to 'Back', products_path %>
