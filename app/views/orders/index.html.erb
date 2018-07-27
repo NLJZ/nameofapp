@@ -4,11 +4,8 @@
   <div class="row">
     <% @orders.each do |order| %>
       <div class="col-md-4">
-        <h3>Order # <%= order.id %>:</h3>
-          
+        <h3>Order # <%= order.id %>:</h3>         
         <h4><%= link_to order.product.name, order %></h4>
-        
-        
         <h5><%= order.product.description %></h5>
         <h5>$ <%= order.product.price %></h5>
         
