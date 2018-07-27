@@ -11,20 +11,24 @@
       <li class="nav-item"><%= link_to "About", simple_pages_about_path %></li>
       <li class="nav-item"><%= link_to "Contact", simple_pages_contact_path %></li>
       <li class="nav-item"><%= link_to "Products", products_path %></li>
-      <li class="nav-item"><%= link_to "Orders", orders_path %></li>
     </ul>
     <ul class="navbar-nav ml-auto">
     <% if user_signed_in? %>
-    <li class="nav-item">
-      <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "nav-link") %>
-    </li>
-    <li class="nav-item">
-      <%= link_to('Edit', edit_user_registration_path, class: "nav-link") %>
-      </li>
+    <div class="dropdown">
+      <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      My Account
+    </button>
+        <div class="dropdown-menu">
+          <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "dropdown-item") %>
+          <%= link_to('Edit Password/Email', edit_user_registration_path, class: "dropdown-item") %>
+          <%= link_to('Edit Name', edit_user_path(current_user), class: "dropdown-item") %>
+        </div>
+    </div>
     <% else %>
     <li class="nav-item">
       <%= link_to('Login', new_user_session_path, class: "nav-link") %>
     </li>
+    
     <% end %>
     </li>
     </ul>
