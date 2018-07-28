@@ -9,7 +9,7 @@
     Color: <%= product.colour %>
   </p>
   <p>
-    Price: <%= product.price %>
+    Price: <%= number_to_currency(product.price) %>
   </p>
   <p>
     <%= link_to 'Show', product %></td>

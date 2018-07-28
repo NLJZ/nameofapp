@@ -7,7 +7,7 @@
         <h3>Order # <%= order.id %>:</h3>         
         <h4><%= link_to order.product.name, order %></h4>
         <h5><%= order.product.description %></h5>
-        <h5>$ <%= order.product.price %></h5>
+        <h5><%= number_to_currency(order.product.price) %></h5>
         
       </div><!-- /col -->
     <% end %>
