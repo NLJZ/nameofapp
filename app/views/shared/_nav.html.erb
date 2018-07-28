@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm navbar-dark justify-content-between fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark justify-content-between fixed-top">
   <a class="navbar-brand" href="#">Bikes! Bikes! Bikes!</a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -15,9 +15,9 @@
     <ul class="navbar-nav ml-auto">
     <% if user_signed_in? %>
     <div class="dropdown">
-      <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <a class="dropdown-toggle nav-link" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       My Account
-    </button>
+    </a>
         <div class="dropdown-menu">
           <%= link_to('My Orders', orders_path, class: "dropdown-item") %>
           <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "dropdown-item") %>
