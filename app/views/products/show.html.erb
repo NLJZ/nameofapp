@@ -10,7 +10,9 @@
 
 <div class="container">
   <p>
+  <% if @product.image_url.present? %>
     <%= image_tag(@product.image_url, class:"img-responsive") %>
+  <% end %>
   </p>
 
   <p>
@@ -28,11 +30,13 @@
     <%= @product.price %> Dollars
   </p>
   <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
-
+  <div class="row">
   <%= render 'new_comment' %>
   <%= render 'comments' %>
+  </div>
 
   <%= link_to 'Edit', edit_product_path(@product) %> |
   <%= link_to 'Back', products_path %>
+  
 
 </div>

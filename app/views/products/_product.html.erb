@@ -1,7 +1,9 @@
 <div class="col-md-6 col-lg-4 product-box">
   <div class="container-fluid product-holder">
   <h3><%= product.name %></h3>
+  <% if product.image_url.present? %>
     <%= image_tag(product.image_url, class: "img-fluid") %>
+  <% end %>
   <p>
     Description: <%= product.description %> 
   </p>
