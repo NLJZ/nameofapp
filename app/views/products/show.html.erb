@@ -25,18 +25,33 @@
     <%= @product.colour %>
   </p>
 
-   <p>
+  <p>
     <strong>Price:</strong>
     <%= @product.price %> Dollars
   </p>
-  <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
-  <div class="row">
-  <%= render 'new_comment' %>
-  <%= render 'comments' %>
+  <div class="flex-container">
+  <p>
+    <strong>Average Rating:</strong> 
+    </p>
+    <div class="rated" data-score="<%= @product.average_rating %>"></div>
+  
+  </div>
+  
+  <div class="row reviews">
+    <div class="col-md-6">
+      <%= render 'new_comment' %>
+    </div>
+      
+    <div class="col-md-6">
+    <strong>Recent Reviews:</strong>
+      <%= render 'comments' %>
+    </div>
+  </div>
+    <%= link_to 'Edit', edit_product_path(@product) %> |
+    <%= link_to 'Back', products_path %>
   </div>
 
-  <%= link_to 'Edit', edit_product_path(@product) %> |
-  <%= link_to 'Back', products_path %>
+
   
 
 </div>

@@ -37,7 +37,7 @@ h2 {
 }
 
 p {
-  text-align: center;
+  text-align: left;
 }
 
 form {
@@ -195,4 +195,30 @@ a.navbar-brand img {
 
 .alert p {
   margin: 0;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flex-container p {
+  margin: 0;
+}
+
+.rated {
+  margin-left: 5px;
+}
+
+.reviews {
+  margin-top: 40px;
+}
+
+.review_box {
+  width: 90%;
+}
+
+.review_button {
+  margin-top: 10px;
 }
