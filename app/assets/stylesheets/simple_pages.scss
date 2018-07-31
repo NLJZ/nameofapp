@@ -71,7 +71,6 @@ a:hover {
 
 .navbar {
   background-color: black;
-  
 }
 
 a.navbar-brand img {
@@ -195,6 +194,7 @@ a.navbar-brand img {
 
 .alert p {
   margin: 0;
+  text-align: center;
 }
 
 .flex-container {
@@ -222,3 +222,23 @@ a.navbar-brand img {
 .review_button {
   margin-top: 10px;
 }
+
+.pagination a,
+.current,
+.disabled {
+  margin: 3px;
+  border: solid 1px #777;
+  padding: 3px 5px;
+  color: #999;
+  border-radius: 5px;
+}
+
+.new_comment {
+  margin-top: 20px;
+}
+
+.new_comment h4 {
+  margin: 0;
+}
+
+
