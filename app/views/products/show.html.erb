@@ -5,12 +5,13 @@
 </p>
 
 <div class="container">
-
-  <p>
-  <% if @product.image_url.present? %>
-    <%= image_tag(@product.image_url, class:"img-responsive") %>
-  <% end %>
-  </p>
+  
+    <p>
+    <% if @product.image_url.present? %>
+      <%= image_tag(@product.image_url, class:"img-fluid mx-auto d-block") %>
+    <% end %>
+    </p>
+  
   <div class="row reviews">
     <div class="col-md-6">
       <p>
