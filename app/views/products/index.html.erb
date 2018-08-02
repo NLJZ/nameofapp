@@ -1,12 +1,13 @@
 <div class="container">
 <h1>BIKES! BIKES! BIKES!</h1>
 <h2>Products</h2>
-<p id="notice"><%= notice %></p>
+
 
   <div class="row">
     <%= render @products %>
   </div>
-
+<% if signed_in? && current_user.admin? %>
 <%= link_to 'New Product', new_product_path %>
+<% end %>
 
 </div>

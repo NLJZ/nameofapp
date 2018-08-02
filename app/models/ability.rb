@@ -9,8 +9,10 @@ class Ability
      else
       can :manage, User, id: user.id
       can :read, Order, :user_id => user.id
+      can :read, Product
       cannot :destroy, :all
      end
+
 
     # Define abilities for the passed in user here. For example:
     #
