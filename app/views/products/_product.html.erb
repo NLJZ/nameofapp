@@ -4,7 +4,7 @@
     <h3><%= product.name %></h3>
   
   <% if product.image_url.present? %>
-    <%= link_to image_tag(product.image_url), product %>
+    <%= link_to image_tag(product.image_url, onerror: "this.style.display='none'"), product %>
   <% end %>
   <p>
     Description: <%= product.description %>

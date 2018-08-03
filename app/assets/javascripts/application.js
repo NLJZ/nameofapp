@@ -17,3 +17,9 @@
 //= require jquery3
 //= require jquery.raty.js
 //= require_tree .
+
+$("img").error(function () {
+  $(this).unbind("error").attr("assets", "racingbikeblack.svg");
+});
+
+
