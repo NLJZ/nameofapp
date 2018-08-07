@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "user_registrations" }                                   
   resources :users
+
   get 'simple_pages/index'
   get 'simple_pages/about'
   get 'simple_pages/contact'
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
   get 'simple_pages/landing_page'
   post 'simple_pages/thank_you'
   root 'simple_pages#index'
+  post 'payments/create'
 
   resources :products do
     resources :comments
