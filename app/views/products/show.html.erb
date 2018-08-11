@@ -8,8 +8,7 @@
   
     <p>
     <% if @product.image_url.present? %>
-      <%= image_tag(@product.image_url, class:"img-fluid mx-auto d-block") %>
-      <% else %><div></div>
+      <%= image_tag(@product.image_url, class:"img-fluid mx-auto d-block", id: "img_zoom", data_zoom_image: "@product.image_url") rescue nil %>
     <% end %>
     </p>
   
