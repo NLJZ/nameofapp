@@ -1,30 +1,33 @@
-<div class="col-md-6 col-lg-4 product-box">
-  <div class="container-fluid product-holder">
-  
-    <h3><%= product.name %></h3>
-  
-  <% if product.image_url.present? %>
-  <div>
-    <%= link_to image_tag(product.image_url), product rescue nil %>
+<% cache product do %>
+  <div class="col-md-6 col-lg-4 product-box">
+    <div class="container-fluid product-holder">
+    
+      <h3><%= product.name %></h3>
+    
+    <% if product.image_url.present? %>
+    <div>
+      <%= link_to image_tag(product.image_url), product rescue nil %>
+      </div>
+    <% else %>
+      <div></div>
+    <% end %>
+    <p>
+      Description: <%= product.description %>
+    </p>
+    <p>
+      Color: <%= product.colour %>
+    </p>
+    <p>
+      Price: <%= number_to_currency(product.price) %>
+    </p>
+    <% if signed_in? && current_user.admin? %>
+    <p>
+      <%= link_to 'Show', product %></td>
+      <%= link_to 'Edit', edit_product_path(product) %>
+      <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </p>
+    <% end %>
     </div>
-  <% else %>
-    <div></div>
-  <% end %>
-  <p>
-    Description: <%= product.description %>
-  </p>
-  <p>
-    Color: <%= product.colour %>
-  </p>
-  <p>
-    Price: <%= number_to_currency(product.price) %>
-  </p>
-  <% if signed_in? && current_user.admin? %>
-  <p>
-    <%= link_to 'Show', product %></td>
-    <%= link_to 'Edit', edit_product_path(product) %>
-    <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-  </p>
-  <% end %>
   </div>
-</div>
+
+  <% end %>
