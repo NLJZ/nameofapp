@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function(){
+var refreshRating = function() {
   $('.rating').raty({
     starHalf: '<%= asset_path 'star-half.png' %>',
     starOff: '<%= asset_path 'star-off.png' %>',
@@ -15,15 +15,18 @@ $(document).on('turbolinks:load', function(){
       return $(this).attr('data-score');
     }
   });
+};
+
+
+$(document).on('turbolinks:load', function(){
+  refreshRating();
+
+  $(".alert, .notice").delay(3000).fadeOut(2000);
 
   $("#img_zoom").elevateZoom({
     zoomType: "lens",
     lensShape: "round",
     lensSize: 200
-
-
-
-
   });
 
 });
