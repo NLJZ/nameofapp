@@ -41,7 +41,7 @@
           <%= hidden_field_tag(:product_id, @product.id) %>
         <% end %>
       </p>
-  
+      
       <%= render 'new_comment' %>
    
   </div>
@@ -49,6 +49,7 @@
     <div class="col-md-6">
       <div class="row">
         <div class="col">
+      <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
       <strong>Recent Reviews:</strong>
         
         <div class="productreviews">
