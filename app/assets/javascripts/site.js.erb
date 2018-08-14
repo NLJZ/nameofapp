@@ -17,11 +17,9 @@ var refreshRating = function() {
   });
 };
 
-
 $(document).on('turbolinks:load', function(){
-  refreshRating();
 
-  $(".alert, .notice").delay(3000).fadeOut(2000);
+  refreshRating();
 
   $("#img_zoom").elevateZoom({
     zoomType: "lens",
