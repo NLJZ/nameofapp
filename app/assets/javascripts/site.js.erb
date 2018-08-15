@@ -19,6 +19,8 @@ var refreshRating = function() {
 
 $(document).on('turbolinks:load', function(){
 
+  $(".alert").delay(2000).fadeOut(800);
+
   refreshRating();
 
   $("#img_zoom").elevateZoom({
@@ -26,5 +28,7 @@ $(document).on('turbolinks:load', function(){
     lensShape: "round",
     lensSize: 200
   });
+
+  
 
 });
