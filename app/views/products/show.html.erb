@@ -12,7 +12,7 @@
     <% end %>
     </p>
   
-  <div class="row reviews">
+  <div class="row reviews" data-product-id="<%= @product.id %>">
     <div class="col-md-6">
       <p>
         <strong>Description:</strong>
@@ -29,19 +29,16 @@
         <%= number_to_currency(@product.price) %>
       </p>
 
-      <p>
+       <p>
         <strong>Viewed:</strong> 
         <%= @view_counter %> times.
       </p>
-
+      
       <div class="flex-container">
         <p><strong>Average Rating:</strong></p>
 
         <div id="average_rating_outside_div">
           <p><div class="rated" data-score="<%= @product.average_rating %>"></div></p>
-        </div>
-        <div>
-        
         </div>
       </div>
       <p>
