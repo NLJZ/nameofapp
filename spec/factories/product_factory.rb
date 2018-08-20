@@ -4,9 +4,9 @@ FactoryBot.define do
   factory :product do
     name
     description "Wow"
-    image_url "http://www.google.com"
+    image_url "https://fezzaribikes.files.wordpress.com/2010/11/cascade_fezzari.jpg"
     colour "black"
-    price 100
+    price 100.00
   end
 
 end

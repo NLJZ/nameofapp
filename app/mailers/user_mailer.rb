@@ -17,7 +17,6 @@ class UserMailer < ApplicationMailer
   def order_confirm(user, product)
     @user = user
     @product = product
-    @appname = "Bikes x3"
     mail(to: user.email,
       subject: "Congratulations on your purchase from BikesX3!")
   end

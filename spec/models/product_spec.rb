@@ -22,9 +22,6 @@ describe Product do
     it "is not valid without a name" do
       expect(Product.new(description: "great bike")).not_to be_valid
     end
+
   end
-
-  
-    
-
 end

@@ -9,4 +9,12 @@ FactoryBot.define do
     admin false
   end
 
+  factory :adminuser, class: User do
+    email "admin@example.com"
+    password "hihihihi"
+    first_name "Mr"
+    last_name "Admin"
+    admin true
+  end
+
 end
