@@ -48,6 +48,10 @@ form {
   max-width: 900px;
 }
 
+table {
+  margin: 0 auto;
+}
+
 .contact-holder button {
   margin-top: 20px;
   margin-bottom: 10px;
@@ -247,4 +251,10 @@ a.navbar-brand img {
 
 .comment-alert {
   margin: 5px;
+}
+
+.orders {
+  border: solid 1px #777;
+  margin: 5px;
+  padding: 10px;
 }

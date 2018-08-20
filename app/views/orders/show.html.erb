@@ -1,9 +1,29 @@
 <div class="container">
   <h2>Order Information</h2>
-  <strong>Order ID: </strong><%= @order.id %>
-  
-  <strong>Product Name: </strong><%= @order.product.name %>
-  <strong>Product Price: </strong><%= number_to_currency(@order.product.price) %>
-  <strong>Total Price: </strong><%= number_to_currency(@order.total) %>
+  <table>
+  <tr>
+  <td>
+  <%= link_to image_tag(@order.product.image_url), product rescue nil %>
+  </td></tr>
+  <tr>
+  <td>
+  <strong>Ordered by: </strong>
+  </td>
+  <td>
+  <%= @order.user.first_name %> <%= @order.user.last_name %>
+  </td>
+  </tr>
+  <tr>
+  <td>
+  <strong>Product Name: </strong>
+  </td><td><%= @order.product.name %></td></tr>
+  <tr>
+  <td>
+  <strong>Product Price: </strong></td><td><%= number_to_currency(@order.product.price) %></td></tr>
+  <tr>
+  <td>
+  <strong>Total Price: </strong></td><td><%= number_to_currency(@order.total) %></td> </tr>
+
+  </table>
   
 </div>

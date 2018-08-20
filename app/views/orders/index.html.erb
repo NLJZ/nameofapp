@@ -1,13 +1,13 @@
 <h1> BIKES! BIKES! BIKES!</h1>
 <h2>Orders</h2>
 <div class="container-fluid info-box">
-  <div class="row">
+  <div class="row order-row">
     <% @orders.each do |order| %>
-      <div class="col-md-4">
-        <h3>Order # <%= order.id %>:</h3>         
-        <h4><%= link_to order.product.name, order %></h4>
-        <h5><%= order.product.description %></h5>
-        <h5><%= number_to_currency(order.product.price) %></h5>
+      <div class="col-sm-12 orders">
+        <h5>Order # <%= order.id %>:</h3>         
+        <h6>Product: <%= link_to order.product.name, order %></h6>
+        <h6>Description: <%= order.product.description %></h6>
+        <h6>Price: <%= number_to_currency(order.product.price) %></h6>
         
       </div><!-- /col -->
     <% end %>
