@@ -4,10 +4,10 @@
   <div class="row order-row">
     <% @orders.each do |order| %>
       <div class="col-sm-12 orders">
-        <h5>Order # <%= order.id %>:</h3>         
-        <h6>Product: <%= link_to order.product.name, order %></h6>
-        <h6>Description: <%= order.product.description %></h6>
-        <h6>Price: <%= number_to_currency(order.product.price) %></h6>
+        <h5>Order # <%= order.id rescue nil %>:</h3>         
+        <h6>Product: <%= link_to order.product.name, order rescue nil %></h6>
+        <h6>Description: <%= order.product.description rescue nil %></h6>
+        <h6>Price: <%= number_to_currency(order.product.price) rescue nil %></h6>
         
       </div><!-- /col -->
     <% end %>
